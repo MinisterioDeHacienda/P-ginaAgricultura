@@ -1,0 +1,72 @@
+@import url(styles-footer.css);
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Raleway", sans-serif;
+}
+
+main {
+    font-family: "Raleway", sans-serif;
+    display: grid;
+    grid-template-columns: auto repeat(2, 1fr);
+    grid-template-rows: 70px auto auto 70px;
+    grid-template-areas:
+        "header header header"
+        "hero hero hero"
+        "content content content"
+        "footer footer footer";
+    height: 100vh;
+    /* Ocupa el 100% de la altura de la ventana */
+}
+
+header {
+    grid-area: header;
+}
+
+.hero {
+    grid-area: hero;
+}
+
+
+.content {
+    grid-area: content;
+    text-align: center;
+}
+
+footer {
+    grid-area: footer;
+}
+
+.content__paragraph {
+    line-height: 1.7;
+}
+
+.content__main {
+    padding-top: 80px;
+    display: grid;
+    width: 90%;
+    margin: 0 auto;
+    gap: 1em;
+    overflow: hidden;
+    grid-template-columns: repeat(auto-fit, minmax(260px, auto));
+}
+
+
+.content__icons {
+    display: grid;
+    gap: 1em;
+    justify-items: center;
+    width: 260px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.content__icon {
+    width: 40px;
+}
+.subtitle {
+    color: rgb(35, 101, 35);
+    font-size: 2rem;
+    margin-bottom: 25px;
+}
